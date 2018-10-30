@@ -4,7 +4,7 @@
     font-family: sans-serif;
     height: 100%;
     min-height: 800px;
-    animation: main-container-effect 10000ms cubic-bezier(.17, .67, .83, .67) infinite;
+    /* animation: main-container-effect 10000ms cubic-bezier(.17, .67, .83, .67) infinite; */
     transition: all 0.3s;
     width: 100%;
 }
