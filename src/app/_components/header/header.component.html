@@ -1,0 +1,87 @@
+<header class="main-header" [@headerAnim]='openClose' [ngStyle]="setMyStyles()">
+    <nav>
+        <div class="nav-left">
+            <ul>
+                <li>
+                    <a href="javascript:void(0)" (click)="openCloseSidebar()">
+                        <i class="fa fa-bars fa-fw fa-1x" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+
+                    <i class="fa fa-search" aria-hidden="true"></i> &nbsp;
+                    <input type="search" name="search" id="search" />
+
+                </li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <ul>
+                <!-- <li>
+                    <div class="dropdown">
+                        <a class="dropbtn">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="#">
+                                <i class="fa fa-user" aria-hidden="true"></i>Profile</a>
+                            <a href="#">
+                                <i class="fa fa-address-book-o" aria-hidden="true"></i>Inbox</a>
+                            <a href="#">
+                                <i class="fa fa-cog" aria-hidden="true"></i>Setting</a>
+                            <a href="#">
+                                <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+                        </div>
+                    </div>
+                </li> -->
+
+
+
+                <!-- <li>
+                    <div ngbDropdown class="d-inline-block">
+                        <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Toggle dropdown</button>
+                        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                            <button class="dropdown-item">Action - 1</button>
+                            <button class="dropdown-item">Another Action</button>
+                            <button class="dropdown-item">Something else is here</button>
+                        </div>
+                    </div>
+                </li> -->
+
+                <!-- <li>
+                        <div ngbDropdown class="d-inline-block">
+                                <button class="btn btn-outline-primary nav-link dropdown-toggle" id="dropdownBasic1" ngbDropdownToggle>More Actions..</button>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownBasic1" ngbDropdownMenu >
+                                    <button class="dropdown-item">Action - 1</button>
+                                    <button class="dropdown-item">Another Action</button>
+                                    <button class="dropdown-item">Something else is here</button>
+                                </div>
+                            </div>
+                </li> -->
+
+
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-tasks" aria-hidden="true"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-envelope" aria-hidden="true">
+                            <!-- <span class="badge bg-green">6</span> -->
+                        </i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <h3>Welcome : John Doe</h3>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+</header>

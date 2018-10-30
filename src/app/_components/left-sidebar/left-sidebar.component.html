@@ -1,0 +1,140 @@
+<div id="wrapper">
+    <app-header></app-header>
+    <div class="left-Sidebar" [@sideMenuAnim]='openClose'>
+
+        <nav>
+
+            <div class="profile">
+                <div class="profile_pic">
+                    <img src="../../../assets/img_avatar.png" alt="no image found" class="img-circle profile_img">
+                </div>
+                <div class="profile_info">
+                    <span>Welcome,</span>
+                    <h2>John Doe</h2>
+                </div>
+            </div>
+
+
+            <ul class="left-sidebar-menu">
+
+                <li>
+                    <a routerLink="/dashboard/home" routerLinkActive="custom-active">
+                        <i class="fa fa-home fa-fw" aria-hidden="true"></i>
+                        <span>{{ 'Home' | translate}}</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a routerLink="/dashboard/blank" routerLinkActive="custom-active">
+                        <i class="fa fa-envelope fa-fw"></i>
+                        <span>{{'Blank'| translate}}</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a routerLink="/dashboard/charts" routerLinkActive="custom-active">
+                        <i class="fa fa-black-tie fa-fw"></i>
+                        <span>{{'Dashboard'| translate}}</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a routerLink="/dashboard/userPlan" routerLinkActive="custom-active">
+                        <i class="fa fa-black-tie fa-fw"></i>
+                        <span>{{'UserPlan'| translate}}</span>
+                    </a>
+
+                </li>
+
+                <li>
+                    <a routerLink="/dashboard/upload" routerLinkActive="custom-active">
+                        <i class="fa fa-download fa-fw"></i>
+                        <span>
+                            {{'Upload'| translate}}
+                        </span>
+
+
+                    </a>
+                </li>
+
+
+                <li>
+                    <a routerLink="/pageNotFound" routerLinkActive="custom-active">
+                        <i class="fa fa-th fa-fw"></i>
+                        <span>
+                            {{'Link Broken'| translate}}
+                        </span>
+                        <small class="label pull-right">new</small>
+
+                    </a>
+                </li>
+
+                <li>
+                    <a routerLink="/dashboard/train" routerLinkActive="'custom-active'" [routerLinkActiveOptions]="{exact: true}">
+                        <i class="fa fa-train fa-fw" aria-hidden="true"></i>
+                        <span>{{'Trains'| translate}}</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/dashboard/trainstation" routerLinkActive="custom-active" [routerLinkActiveOptions]="{exact: true}">
+                        <i class="fa fa-clone fa-fw" aria-hidden="true"></i>
+                        <span>{{'TrainStation'| translate}}</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-anchor fa-fw" aria-hidden="true"></i>
+                        <span>{{'Anchor'| translate}}</span>
+                    </a>
+                </li>
+
+
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-bell fa-fw" aria-hidden="true"></i>
+                        <span>Bell</span>
+                    </a>
+                </li>
+
+                <li routerLink="/dashboard/user" routerLinkActive="custom-active">
+                    <a href="javascript:void(0)">
+                        <i class="fa fa-user-plus fa-fw" aria-hidden="true"></i>
+                        <span>User</span>
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </a>
+                    <ul class="nested-submenu">
+                        <li>
+                            <a href="../charts/chartjs.html">
+                                <i class="fa fa-user-plus fa-fw" aria-hidden="true"></i> Create User</a>
+                        </li>
+                        <li>
+                            <a href="../charts/morris.html">
+                                <i class="fa fa-circle-o fa-fw"></i> List of Users</a>
+                        </li>
+
+                    </ul>
+                </li>
+
+
+                <li>
+                    <a href="javascript:void(0)" (click)="logout()">
+                        <i class="fa fa-sign-out fa-fw" aria-hidden="true"></i>
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="leftFooter">
+            lfooter
+        </div>
+    </div>
+    <app-right-sidebar style="display: none"></app-right-sidebar>
+    <section id="content">
+
+        <section id="right-content" [@contentAnimation]='openClose'>
+            <router-outlet></router-outlet>
+        </section>
+    </section>
+    <app-footer></app-footer>
+</div>

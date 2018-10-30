@@ -1,0 +1,134 @@
+<style>
+  .my-pagination /deep/ .ngx-pagination .current {
+    background: red;
+  }
+
+</style>
+<!-- <div class="row" *ngxPermissionsOnly="['SUPER']" id="userplanId"> -->
+  <div class="row" id="userplanId">
+  <div class="col-lg-12">
+    <h1 class="page-header">Plan</h1>
+
+  </div>
+
+  <!-- <perfect-scrollbar style="max-width: 1400px; max-height: 1000px;" [config]="config"> -->
+  <div class="col-lg-12">
+    <!-- <FORZEROONE-ERROR></FORZEROONE-ERROR>  -->
+    <!-- <ONEZEROONE-ERROR></ONEZEROONE-ERROR> -->
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4>List of all UserPlan
+
+        </h4>
+      </div>
+      <!-- <div class="panel-heading"><h1 myHidden>List of all UserPlan </h1></div> -->
+      <div class="panel-body">
+
+        <div msg="No Records Found" *ngIf="_isshowLoading">
+          <p style="color:red">No Records Found</p>
+        </div>
+
+
+        <table class="table table-striped table-hover table-condensed">
+          <thead>
+            <tr>
+              <th style="width:5%;">SLNO</th>
+              <th style="width:10%;">PLANNAME</th>
+              <th style="width:10%;">OWNER</th>
+              <th style="width:10%;">DATE</th>
+              <th style="width:20%;">Action</th>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td>
+                <input class="form-control input-sm" id="inputsm" type="text" [(ngModel)]="query.planName" (ngModelChange)="_loadallUserplanWithPromise($event)">
+              </td>
+              <td>
+                <input class="form-control input-sm" id="inputsm" type="text" [(ngModel)]="query.owner" (ngModelChange)="_loadallUserplanWithPromise($event)">
+              </td>
+              <td>
+                <input class="form-control input-sm" id="inputsm" type="text" [(ngModel)]="query.createdTime" (ngModelChange)="_loadallUserplanWithPromise($event)">
+              </td>
+              <td>
+
+              </td>
+
+
+            </tr>
+          </thead>
+          <tbody *ngIf="!_isshowLoading">
+            <tr *ngFor="let userPlan of _userPlansList | paginate: { itemsPerPage: query.limit, currentPage: query.page,totalItems: _noOfRecords} let index = index">
+              <td>{{index+1}}</td>
+              <td>{{userPlan.planName}}</td>
+              <td>{{userPlan.owner}}</td>
+              <td>{{userPlan.createdTime | date: 'dd/MM/yyyy'}}</td>
+
+              <td>
+                <a class="btn btn-primary btn-xs">
+                  <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                </a>
+
+                <a class="btn btn-danger btn-xs" (click)="remove(userPlan)">
+                  <i class="fa fa-trash" aria-hidden="true"></i>
+                </a>
+
+                <a class="btn btn-info btn-xs" (click)="popToast()">
+                  <i class="fa fa-list" aria-hidden="true"></i>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+
+          <tbody *ngIf="_isshowLoading">
+            <tr style="height: 200px">
+              <td colspan="13" class="text-center">
+                <i class="fa fa-spinner fa-3x fa-pulse"> </i> Loading Plan ...
+              </td>
+            </tr>
+          </tbody>
+
+          <tfoot>
+            <tr>
+              <td colspan="9" class="text-center">
+                <pagination-controls class="my-pagination" (pageChange)="pageChanged($event)" maxSize="9" directionLinks="true" autoHide="true"
+                  previousLabel="Previous" nextLabel="Next" screenReaderPaginationLabel="Pagination" screenReaderPageLabel="page"
+                  screenReaderCurrentLabel="You're on page"></pagination-controls>
+
+              </td>
+            </tr>
+          </tfoot>
+
+
+        </table>
+      </div>
+
+      <div class="panel-footer" style="height: 100px;">
+        <div class="col-xs-4">
+            Records Per Page (1-100)
+          <input name="itemsperpage" style="max-width:80px;" class="input-sm form-control" min=1 max=100 value=100 step=1 type="number" (ngModelOptions)="{ debounce: 1000 }"
+            [(ngModel)]="query.limit" (ngModelChange)="_loadallUserplanWithPromise($event)">
+
+        </div>
+        <div class="col-xs-4 text-center">Showing Entries {{_current}} of {{_pageLen}} of {{_noOfRecords}} Entries
+
+        </div>
+        <div class="col-xs-4">
+          Showing
+          <select [(ngModel)]="query.page" style="max-width:80px;" class="input-sm form-control pull-right" (ngModelChange)="_loadallUserplanWithPromise($event)">
+            <option value="" selected disabled>Choose here</option>
+            <option *ngFor="let sp of _pages" [ngValue]="sp">{{sp}}</option>
+          </select>
+          Entries
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  <!-- </perfect-scrollbar> -->
+
+
+</div>

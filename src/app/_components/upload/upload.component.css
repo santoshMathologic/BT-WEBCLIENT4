@@ -1,0 +1,116 @@
+div.upload {
+    width: 145px;
+    height: 40px;
+    background: #3c3c3c;
+    overflow: hidden;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+div.upload span {
+    display: block;
+    padding: 10px 20px;
+}
+
+div.upload input {
+    display: block !important;
+    width: 157px !important;
+    height: 57px !important;
+    opacity: 0 !important;
+    overflow: hidden !important;
+}
+
+/* .div1,.div2 {
+    display: block;
+    padding: 0 10px;
+  }
+
+  .div2 {
+    float: right;
+  } */
+
+#customers {
+    
+    width: 100%;
+    min-width: 1100px;
+    background-color: transparent;
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+
+#customers th {
+    text-transform: capitalize;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+#customers td,
+#customers th {
+    border-bottom: 1px solid #ddd;
+    padding: 0px;
+    margin: 0px;
+}
+
+#customers tr:nth-child(even) {
+    background-color: rgba(249, 249, 249);
+}
+#customers td:nth-last-child(1) {
+    padding:0 5px;
+  }
+
+#customers tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255);
+}
+
+/* #customers tr:nth-child(2){
+    background-color: #5e0707;
+} */
+
+#customers tr:hover {
+    background-color: #ddd;
+}
+
+#customers td {
+    max-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.custom-alert-info{
+    position: absolute;
+    top: 100%;
+    left: 2%;
+    width: 96%;
+    height: 100%;
+    padding: 140px 350px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    color:#000;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgba(48, 163, 68,0.3);
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.highlighted{
+    background-color: #4CAF50!important;
+    color: #fff;
+}

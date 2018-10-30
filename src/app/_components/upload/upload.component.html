@@ -1,0 +1,66 @@
+<div class="row">
+  <div class="col-lg-12">
+    <app-bread-crumb [heading]="'Upload'" [(urlPart)]="urlpart"></app-bread-crumb>
+
+    <!-- <div class="upload">
+        <span>
+          <i class="fa fa-plus" aria-hidden="true"></i> Choose File </span> -->
+    <input type="file" (change)="incomingfile($event)" accept=".xlsx">
+    <!-- </div> -->
+
+
+
+    <button type="button" class="btn btn-primary" (click)="Upload()">
+      Upload</button>
+
+
+    <br>
+    <br>
+    <br>
+
+    <div class="alert alert-info custom-alert-info" *ngIf="fileinfo.length==0">
+      <strong>Success!</strong> Click browser to upload the files .
+    </div>
+
+
+    <div class="tooltip">Hover over me
+      <span class="tooltiptext">Tooltip text</span>
+    </div>
+
+    <table id="customers">
+      <tr>
+        <th>slno.</th>
+        <th>file name</th>
+        <th>uploader</th>
+        <th>size</th>
+        <th>type</th>
+        <th>date</th>
+        <th>action</th>
+      </tr>
+      <tbody *ngIf="fileinfo.length>0">
+        <tr *ngFor="let fileItem of fileinfo;let i = index" [class.highlighted]="fileItem.filename === currentName" (click)="selectedUpload($event,fileItem)">
+          <!-- <td><a (click)="selectedUpload($event,fileItem)" class="btn btn-success btn-xs fa fa-th-list" title="View"></a></td> -->
+          <td>{{i+1}}</td>
+          <td>{{fileItem.filename}}</td>
+          <td>{{'santosh'}}</td>
+          <td>{{fileItem.size}}</td>
+          <td>{{fileItem.type}}</td>
+          <td>{{fileItem.lastModifiedDate}}</td>
+          <!-- <td><img [src]="f.fileData" width="80" height="80"></td> -->
+          <td>
+            <button class="btn btn-danger btn-sm" (click)="deleteRecord(fileItem)">
+              <i class="fa fa-trash" aria-hidden="true"></i>
+            </button>
+            &nbsp;
+
+            <button class="btn btn-info btn-sm">
+              <i class="fa fa-edit" aria-hidden="true"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+
+  </div>
+</div>

@@ -1,0 +1,16 @@
+{
+  "name": "crewlink",
+  "version": "0.0.0",
+  "dependencies": {},
+  "ignore": [
+    "node_modules",
+    "bower_components",
+    "components",
+    "test",
+    "tests"
+  ],
+  "appPath": "index",
+  "devDependencies": {
+    "jquery": "^3.3.1"
+  }
+}

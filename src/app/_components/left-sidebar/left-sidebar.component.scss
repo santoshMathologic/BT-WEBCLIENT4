@@ -1,0 +1,22 @@
+// @import "left-sidebar-main.component";
+.nested-menu {
+    width: 100%;
+    .list-group {
+        cursor: pointer;
+    }
+    .nested {
+        list-style-type: none;
+    }
+    ul.submenu {
+        display: none;
+        height: 0;
+        transition: 0.8s all;
+    }
+    & .expand {
+        ul.submenu {
+            display: block;
+            list-style-type: none;
+            height: auto;
+        }
+    }
+}

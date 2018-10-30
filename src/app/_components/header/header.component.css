@@ -1,0 +1,117 @@
+.main-header {
+    top: 0;
+    left: 180px;
+    box-shadow: 0 6px 15px 0px rgba(0, 0, 0, 0.6);
+    background-color: #222d32;
+    opacity: 1;
+    position: absolute;
+    z-index: 904;
+    height: 66px;
+    width: 100%;
+    min-width: 320px;
+    padding: 0 32px 0 40px;
+}
+
+nav {
+    padding: 15px;
+    height: 40px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 150px 0 0px;
+    overflow: hidden;
+}
+
+nav ul h3 {
+    color: #fff;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+}
+
+nav ul li i {
+    color: #fff;
+}
+
+.nav-left {
+    float: left;
+}
+
+.nav-left input[type="search"] {
+    outline: none;
+    background: transparent;
+    width: 150px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    border: solid 1px #324046;
+    padding: 5px;
+    color: #fff;
+    transition: 0.8s all ease;
+    height: 25px;
+}
+
+.nav-left input[type="search"]:focus {
+    width: 250px;
+}
+
+.nav-left ul li {
+    float: left;
+    padding: 5px;
+}
+
+.nav-left ul li a i {
+    color: #fff;
+}
+
+.nav-right ul li {
+    float: right;
+    padding: 5px 20px 0px 5px;
+    height: 200px;
+}
+
+.nav-right .info-number .badge {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 13px;
+    padding: 2px 6px;
+    position: absolute;
+    right: 2px;
+    top: 8px;
+}
+
+.nav-right .bg-green {
+    background: #1ABB9C !important;
+    border: 1px solid #1ABB9C !important;
+    color: #fff;
+}
+
+.nav-right .badge {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #777;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .main-header {
+        left: 100px;
+    }
+    nav ul {
+        padding: 0 100px 0 0;
+    }
+}
+

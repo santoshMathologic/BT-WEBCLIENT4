@@ -1,0 +1,36 @@
+<div [@routerTransition]>
+
+    <!-- <app-page-header [heading]="'Blanks'" [icon]="'fa-arrows fa-fw'" [nSize]="'1'"></app-page-header> -->
+    <!-- <div class="alert alert-success">
+        <strong>Success!</strong> Indicates a successful or positive action.
+      </div> -->
+    <app-bread-crumb [heading]="'Blank'" [(urlPart)]="urlpart"></app-bread-crumb>
+    <div id="loader" class="main-loader" *ngIf="isloading"></div>
+    <table class="custom">
+        <thead>
+            <tr>
+                <th>SLNO.</th>
+                <th>NAME</th>
+                <th>EMAIL</th>
+                <th>BODY</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of commentsList">
+                <td>{{item.postId}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.body}}</td>
+            </tr>
+        </tbody>
+        <tbody *ngIf="isloading">
+
+        </tbody>
+    </table>
+
+
+
+
+
+
+</div>

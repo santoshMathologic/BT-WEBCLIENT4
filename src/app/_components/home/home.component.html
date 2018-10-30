@@ -1,0 +1,37 @@
+<div [@routerTransition] [@openClose]="'true'">
+    <!-- <app-page-header [heading]="'home'" [icon]="'fa-home fa-fw'" [nSize]="'1'"></app-page-header> -->
+    <app-bread-crumb [heading]="'home'" [(urlPart)]="urlpart"></app-bread-crumb>
+
+    <app-image-slider></app-image-slider>
+
+
+    <br>
+    <br>
+
+    <ngb-alert [type]="alert.type" (close)="closeAlert(alert)" *ngFor="let alert of alerts">{{ alert.message }}</ngb-alert>
+    <hr />
+
+    <br>
+    <br>
+    <!-- <button class="btn btn-primary btn-lg" [ladda]="isLoad" (click)="check()">Save</button> -->
+    <br>
+    <br>
+
+    <div class="row">
+        <div class="col-xl-3 col-lg-6">
+            <app-stat [bgClass]="'primary'" [icon]="'fa-comments'" [count]="26" [label]="'New Comments!'"></app-stat>
+        </div>
+
+        <div class="col-xl-3 col-lg-6">
+            <app-stat [bgClass]="'warning'" [icon]="'fa-tasks'" [count]="12" [label]="'New task!'"></app-stat>
+        </div>
+        <div class="col-xl-3 col-lg-6">
+            <app-stat [bgClass]="'success'" [icon]="'fa-shopping-cart'" [count]="124" [label]="'New Orders!'"></app-stat>
+        </div>
+        <div class="col-xl-3 col-lg-6">
+            <app-stat [bgClass]="'danger'" [icon]="'fa-support'" [count]="13" [label]="'New Tickets!'"></app-stat>
+        </div>
+
+    </div>
+
+</div>

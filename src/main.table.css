@@ -1,0 +1,80 @@
+table.custom {
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+  }
+  
+  table.custom tr {
+    background-color: transparent;
+    border-bottom: 1px solid #ddd;
+    padding: .35em;
+  }
+  
+  table.custom th,
+  table.custom td {
+    text-align: center;
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 25px;
+
+  }
+  table.custom tbody tr:nth-child(odd){
+    background-color: rgba(249, 249, 249,1);
+    color: #000;
+  }
+  table.custom th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    height: 35px;
+  }
+  
+  @media screen and (max-width: 600px) {
+    table.custom {
+      border: 0;
+    }
+  
+    table.custom caption {
+      font-size: 1.3em;
+    }
+    
+    table.custom thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    
+    table.custom tr {
+      border-bottom: 3px solid #ddd;
+      display: block;
+      margin-bottom: .625em;
+    }
+    
+    table.custom td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: .8em;
+      text-align: right;
+    }
+    
+    table.custom td::before {
+    
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    
+    table.custom td:last-child {
+      border-bottom: 0;
+    }
+  }

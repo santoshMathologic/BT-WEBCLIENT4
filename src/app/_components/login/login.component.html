@@ -1,0 +1,38 @@
+<div>
+  <div class="main-container">
+    <div class="title">
+      <h1>Login</h1>
+    </div>
+    <div class="login-container">
+      <div class="left-part"></div>
+      <div class="right-part">
+        <div class="formBox">
+          <form #loginForm="ngForm" novalidate>
+
+            <input type="text" name="username" placeholder="Username" [(ngModel)]="username" autocomplete="off" />
+
+            <input type="password" name="pass" placeholder="......." [(ngModel)]="password" autocomplete="off" />
+
+            <!-- <input type="submit" name="" value="Sign In" /> -->
+
+            <div class="submit-button" (click)="login()">
+              <div class="effect-submit-button"></div>
+              <span> Sign In </span>
+            </div>
+            <div class="inner-part">
+              <a href="#">Forget Password</a>
+              <a href="#">SignUp</a>
+            </div>
+
+            <!-- <ui-switch [(ngModel)]="enable" name="enable"></ui-switch>
+            Keep me signed in -->
+
+
+
+          </form>
+        </div>
+      </div>
+    </div>
+    <p>@2018 Prime login Form. All Rights reserved | Design by Mathologic Technology Private Limited</p>
+  </div>
+</div>

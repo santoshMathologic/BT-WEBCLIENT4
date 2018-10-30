@@ -1,0 +1,49 @@
+ol.arrows {
+    display: inline-block;
+    padding: 0 2px;
+}
+
+ol.arrows li {
+    display: inline-block;
+    position: relative;
+}
+
+.arrows li:last-of-type::before,
+.arrows li:last-of-type::after {
+    display: none;
+}
+
+.arrows li a {
+    font: normal 15px Sans-Serif;
+    text-decoration: none;
+}
+
+.arrows li:nth-of-type(1) a {
+    color: rgb(42,64, 83);
+}
+
+.arrows li:nth-of-type(2) a {
+    color: rgb(42,64, 83);
+}
+
+.arrows li:nth-of-type(3) a {
+    color: rgb(42,64, 83);
+}
+
+.arrows li:nth-of-type(4) a {
+    color: rgb(42,64, 83);
+}
+
+i {
+    padding: 3px;
+    margin: 0 5px;
+}
+
+
+.custom-page-header {
+    padding: 9px;
+    margin: 30px 0px 0 0;
+    border-bottom: 1px solid #eee;
+    box-shadow: 5px 10px #888888;
+    box-shadow: 0 4px 6px -6px  rgba(0,0,0,.3);
+}
